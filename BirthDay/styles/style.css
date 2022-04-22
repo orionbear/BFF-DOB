@@ -1,0 +1,103 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    color: rgba(55, 59, 65, 0.8);
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+}
+.countdown-Con{
+    text-align: center;
+}
+
+body {
+    background: #ffffff;
+    overflow: hidden;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+h1 {
+    font-weight: normal;
+    color: white;
+}
+
+li {
+    display: inline-block;
+    font-size: 1rem;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+    width: 150px;
+    margin-top: 7px;
+    color: white;
+}
+
+li span {
+    display: block;
+    font-size: 2rem;
+}
+
+/* Snow  */
+.snow-Div{
+    position: absolute;
+    z-index: +1;
+}
+
+/* DriveContainer */
+.drive-container {
+
+
+}
+
+.character-con{    
+    left: 24%;
+    bottom: 16%;  
+    position: absolute;
+}
+
+
+
+/* .road-con{    
+    width: 500%;
+    height: 200px;
+    background-image: url(../Images/assets/Img_02.png);
+    background-repeat: repeat-x;
+    bottom:0%;    
+    position: absolute;
+    animation: moveRight 6s linear infinite;
+    display: block;
+} */
+
+/* Animation */
+@keyframes moveRight {
+    100%{transform: translateX(-1000px)}
+}
+
+@media only screen and (max-width: 480px) {
+    .character-con{    
+        left: 15%;
+        bottom: 12%;  
+        position: absolute;
+    }
+
+    .road-con{    
+        width: 100%;   
+        height: 200px;
+         
+    }
+    
+    .xe{
+        width: 100%;
+        height: auto;
+        background-image: url("../Images/assets/Img_06.png");
+        
+        position: absolute;
+    }
+
+    @keyframes moveRight {  
+        100%{transform: translateX(-1000px)}
+    }
+}
