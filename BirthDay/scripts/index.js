@@ -1,5 +1,7 @@
 const count = document.getElementById('count');
-const driveCon = document.getElementById('drive-Con');
+const animation = document.getElementById('animation');
+const road = document.getElementById('road');
+const character = document.getElementById('character');
 
 const width = window.innerWidth;
 const height = window.innerHeight;
@@ -44,11 +46,8 @@ function SetupCoundown() {
 }
 
 function SetDriveHeight(){
-  console.log(height);
+  
 
   count.style.width = width + 'px';
-  
-
-
-  
 }
+

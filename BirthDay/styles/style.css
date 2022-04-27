@@ -8,10 +8,13 @@
     color: rgba(55, 59, 65, 0.8);
     font-family: Helvetica, sans-serif;
     font-weight: lighter;
+    margin-top: 5%;
+
 }
 
 .countdown-Con {
     text-align: center;
+
 }
 
 body {
@@ -44,102 +47,103 @@ li span {
 /* Snow  */
 .snow-Div {
     position: absolute;
-    z-index: +1;
+    z-index: +1;  
 }
 
-.drive-container {
-    height: 200px;
+.animation-con{
+    height: auto;    
+     
+}
+
+.road{
+    position: absolute;
+    background-image: url(../Images/assets/building.jpg);
+    background-size: contain;
+    width: 500%;
+    height: 50%;
+    animation: moveRight 1s linear infinite;
 }
 
 .character-con{
-    position: absolute;
-    bottom: 15.5%;
-    animation: suspension 1s linear infinite; 
+    position: absolute; 
+    align-items: center;
+    margin-left: 50%;       
 }
 
-.object-con1{
-    position: absolute;
-    bottom: 16%;
-    right: -10%;
-    animation: moveRight 1s linear infinite; 
+.character{
+    width: 90%;
+    margin-top: 185px;
+    animation: suspension 6s linear infinite;
 }
-.object-con2{
-    position: absolute;
-    bottom: 16%;
-    right: 50%;
-    animation: moveRight 1s linear infinite; 
-}
-
-.road-con {
-    position: absolute;
-    background-image: url(../Images/assets/Img_02.png);   
-    background-repeat: repeat-x;
-    height: 200px;
-    width: 100%;
-    bottom: 0%;   
-}
-
 
 /* Animation */
 @keyframes moveRight {
     100% {
-        transform: translateX(-800px);
-    }  
+        transform: translateX(-1500px);
+    }
 }
+
 @keyframes moveRight2 {
     100% {
         transform: translateX(-550px);
-    }  
+    }
 }
 
 @keyframes suspension {
     100% {
         transform: translateY(-1px);
-    }  
+    }
+
     50% {
         transform: translateY(2px);
-    }  
+    }
+
     0% {
         transform: translateY(-1px);
-    }       
+    }
 }
 
 @media only screen and (max-width: 480px) {
-    html, body{     
+
+    html,
+    body {
         overflow-x: hidden;
     }
 
-    body{
+    body {
         position: relative;
     }
 
-    .drive-container {
-        height: 200px;     
+    .container{
+        margin-top: 40%;
     }
-    
+
+    .countdown-Con {
+        text-align: center;
+        top:20%;
+    }
+
+    .animation-con{
+        height: auto;     
+    }
+
+    .road{
+        position: absolute;
+        background-image: url(../Images/assets/building.jpg);
+        background-size: contain;
+        width: 500%;
+        height: 300px;
+        animation: moveRight 1s linear infinite;
+    }
+
     .character-con{
-        position: absolute;
-        bottom: 11%;
-        animation: suspension 1s linear infinite; 
+        position: absolute;        
     }
 
-    .object-con1{
-        position: absolute;
-        bottom: 11%;
-        right: -20%;    
-        animation: moveRight2 2s linear infinite; 
+    .character{
+        width: 50%;
+        margin-top: 220px;
+        animation: suspension 1s linear infinite;
+        margin-left: 70%;
     }
-    .object-con2{
-        display: none;
-    }
-
-    .road-con {
-        position: absolute;
-        background-image: url(../Images/assets/Img_02.png);   
-        height: 200px;
-        width: 414px;
-        bottom: 0%;
-        right: 0%;      
-        background-repeat: repeat-x;
-    }   
 }
