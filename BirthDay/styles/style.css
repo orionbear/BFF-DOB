@@ -108,6 +108,7 @@ li span {
     html,
     body {
         overflow-x: hidden;
+        overflow-y: scroll;
     }
 
     body {
@@ -115,7 +116,6 @@ li span {
     }
 
     .container{
-        margin-top: 40%;
     }
 
     .countdown-Con {
@@ -137,13 +137,13 @@ li span {
     }
 
     .character-con{
-        position: absolute;        
+        position: absolute; 
+        margin-left: 50%;       
     }
 
     .character{
         width: 50%;
         margin-top: 220px;
         animation: suspension 1s linear infinite;
-        margin-left: 70%;
     }
 }
