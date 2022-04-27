@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    color: rgba(55, 59, 65, 0.8);
+    font-family: Helvetica, sans-serif;
+    font-weight: lighter;
+    margin-top: 5%;
+
+}
+
+.countdown-Con {
+    text-align: center;
+
+}
+
+body {
+    background: #ffffff;
+    overflow: hidden;
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+}
+
+h1 {
+    font-weight: normal;
+    color: white;
+}
+
+li {
+    display: inline-block;
+    font-size: 2rem;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+    width: 150px;
+    margin-top: 7px;
+    color: white;
+}
+
+li span {
+    display: block;
+    font-size: 3rem;
+}
+
+/* Snow  */
+.snow-Div {
+    position: absolute;
+    z-index: +1;  
+}
+
+.animation-con{
+    height: auto;    
+     
+}
+
+.road{
+    position: absolute;
+    background-image: url(../Images/assets/building.jpg);
+    background-size: contain;
+    width: 500%;
+    height: 50%;
+    animation: moveRight 1s linear infinite;
+}
+
+.character-con{
+    position: absolute; 
+    align-items: center;
+    margin-left: 50%;       
+}
+
+.character{
+    width: 90%;
+    margin-top: 185px;
+    animation: suspension 6s linear infinite;
+}
+
+/* Animation */
+@keyframes moveRight {
+    100% {
+        transform: translateX(-1500px);
+    }
+}
+
+@keyframes moveRight2 {
+    100% {
+        transform: translateX(-550px);
+    }
+}
+
+@keyframes suspension {
+    100% {
+        transform: translateY(-1px);
+    }
+
+    50% {
+        transform: translateY(2px);
+    }
+
+    0% {
+        transform: translateY(-1px);
+    }
+}
+
+@media only screen and (max-width: 480px) {
+
+    html,
+    body {
+        overflow-x: hidden;
+    }
+
+    body {
+        position: relative;
+    }
+
+    .container{
+    }
+
+    .countdown-Con {
+        text-align: center;
+        top:20%;
+    }
+
+    .animation-con{
+        height: auto;     
+    }
+
+    .road{
+        position: absolute;
+        background-image: url(../Images/assets/building.jpg);
+        background-size: contain;
+        width: 500%;
+        height: 300px;
+        animation: moveRight 1s linear infinite;
+    }
+
+    .character-con{
+        position: absolute; 
+        margin-left: 50%;       
+    }
+
+    .character{
+        width: 50%;
+        margin-top: 220px;
+        animation: suspension 1s linear infinite;
+    }
+}
