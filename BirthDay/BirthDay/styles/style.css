@@ -47,39 +47,45 @@ li span {
 /* Snow  */
 .snow-Div {
     position: absolute;
-    z-index: +1;  
+    z-index: +1;
+    display: none;
 }
 
-.animation-con{
-    height: auto;    
-     
+.animation-con {
+    position: relative;
+    height: 300px;
 }
 
-.road{
+.road {
     position: absolute;
     background-image: url(../Images/assets/building.jpg);
     background-size: contain;
     width: 500%;
-    height: 50%;
+    height: 200%;
     animation: moveRight 1s linear infinite;
 }
 
-.character-con{
-    position: absolute; 
-    align-items: center;
-    margin-left: 50%;       
+.character-con {
+    top: 450px;
+    left: 100%;
+    width: 100%;
+    height: 200%;
+    z-index: +1;
 }
 
-.character{
-    width: 90%;
-    margin-top: 185px;
+.character {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    top: 450px;
+    left: 50%;
     animation: suspension 6s linear infinite;
 }
 
 /* Animation */
 @keyframes moveRight {
     100% {
-        transform: translateX(-1500px);
+        transform: translateX(-1000px);
     }
 }
 
@@ -108,41 +114,269 @@ li span {
     html,
     body {
         overflow-x: hidden;
+        overflow-y: scroll;
     }
+    /* html,
+    body {
+        height: 100%;
+        margin: 0;
+    } */
+    /* 
+    body {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    } */
 
     body {
         position: relative;
     }
 
-    .container{
-    }
-
     .countdown-Con {
         text-align: center;
-        top:20%;
+        top: 20%;
     }
 
-    .animation-con{
-        height: auto;     
+    .animation-con {
+        position: relative;
+        height: 300px;
     }
 
-    .road{
+    .road {
         position: absolute;
         background-image: url(../Images/assets/building.jpg);
         background-size: contain;
         width: 500%;
-        height: 300px;
+        height: 400px;
         animation: moveRight 1s linear infinite;
     }
 
-    .character-con{
-        position: absolute; 
-        margin-left: 50%;       
+    .character-con {
+        width: 100%;
+        height: 200%;
+        z-index: +1;
     }
 
-    .character{
-        width: 50%;
-        margin-top: 220px;
+    .character {
+        position: absolute;
+        width: 160px;
+        height: 160px;
         animation: suspension 1s linear infinite;
     }
+
+    .character {
+        position: absolute;
+        width: 130px;
+        height: 130px;
+        top: 270px;
+        left: 40%;
+        animation: suspension 6s linear infinite;
+    }
+}
+
+.merrywrap {
+    position: absolute;
+    right: 40px;
+    left: 40px;
+    bottom: 40%;
+    top: 40px;
+}
+
+.giftbox {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    left: 50%;
+    margin-left: -150px;
+    bottom: 0;
+    z-index: 10;
+}
+
+.giftbox>div {
+    background: #F64747;
+    position: absolute;
+    box-shadow: 5px 10px 18px rgba(0, 0, 0, 0.4);
+}
+
+.giftbox>div:after,
+.giftbox>div:before {
+    position: absolute;
+    content: "";
+    top: 0;
+}
+
+.giftbox:after {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    font-size: 24px;
+    text-align: center;
+    transform: rotate(-20deg);
+    transform-origin: 0 0;
+}
+
+.giftbox .cover {
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 25%;
+    z-index: 2;
+}
+
+.giftbox .cover:before {
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    width: 50px;
+    transform: translateX(-50%);
+    background: #2C3E50;
+}
+
+.giftbox .cover>div {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: -50px;
+    transform: translateX(-50%);
+}
+
+.giftbox .cover>div:before,
+.giftbox .cover>div:after {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    box-shadow: inset 0 0 0 15px #2C3E50;
+    border-radius: 30px;
+    transform-origin: 50% 100%;
+}
+
+.giftbox .cover>div:before {
+    transform: translateX(-45%) skewY(40deg);
+}
+
+.giftbox .cover>div:after {
+    transform: translateX(45%) skewY(-40deg);
+}
+
+.giftbox .box {
+    right: 5%;
+    left: 5%;
+    height: 80%;
+    bottom: 0;
+}
+
+.giftbox .box:before {
+    width: 50px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2C3E50;
+}
+
+.giftbox .box:after {
+    width: 100%;
+    height: 30px;
+    background: rgba(0, 0, 0, 0);
+}
+
+
+.step-1 .giftbox {
+    animation: wobble 0.5s linear infinite forwards;
+}
+
+.step-1 .cover {
+    animation: wobble 0.5s linear infinite 5s forwards;
+}
+
+.step-1 .icons .row span {
+    opacity: 1;
+}
+
+.step-2 .giftbox:after {
+    opacity: 0;
+}
+
+.step-3 .giftbox,
+.step-4 .giftbox {
+    opacity: 0;
+    z-index: 1;
+}
+
+.step-3 .giftbox:after,
+.step-4 .giftbox:after {
+    opacity: 0;
+}
+
+.step-2 .giftbox .cover {
+    animation: flyUp 2s ease-in forwards;
+}
+
+.step-2 .giftbox .box {
+    animation: flyDown 2s ease-in 0.05s forwards;
+}
+
+@keyframes wobble {
+    25% {
+        transform: rotate(4deg);
+    }
+
+    75% {
+        transform: rotate(-2deg);
+    }
+}
+
+@keyframes flyUp {
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(20deg);
+        opacity: 0;
+    }
+}
+
+@keyframes flyDown {
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+
+.mangabox{
+    display: flex;
+}
+.other-child {
+    width: 100px;
+    background: yellow;
+    height: auto;
+  }
+
+.child {  
+    width: 100%;
+
+}
+.pic{
+    width: 100%;
+    border: solid 2px white;
+    background-image: linear-gradient(to top, #feada6 0%, #f5efef 100%);
+    margin-top: 50px;
+    height: 250px;
+}
+
+.mangabox{
+    display: none;
 }
